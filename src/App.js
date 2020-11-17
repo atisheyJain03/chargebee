@@ -1,23 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import Homepage from './components/Homepage';
+import Signup from './components/signup/Signup';
 
-function App() {
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import { useState } from 'react';
+import Message from './components/message/Message';
+
+function App() { 
+  
+  // This is user which will be set after anyone will login and the variable user will store the name 
+  const [user,setUser]  = useState(null) // initially it will be null
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      <Router>
+        <Switch>
+          <Route path="/" exact>
+          <Homepage user={user}  />
+          </Route>
+          <Route path="/login" exact>
+          <Signup setUser={setUser} />
+          </Route>
+          <Route path="/message" exact>
+          <Message />
+          </Route>
+        </Switch>
+      </Router>
+      
+    
+     
     </div>
   );
 }

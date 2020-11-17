@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+
+  margin: auto;
 }
 
 .App-logo {
@@ -35,4 +37,44 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.purple {
+  clip-path: polygon(0 60%, 100% 0, 100% 100%, 0 88%);
+  background-color: #8a2be2;
+
+  height: 30px;
+  transform: translateY(-20px);
+}
+.blue {
+  z-index: 1000;
+  top: 0;
+  padding-bottom: 40vh;
+  margin-top: -120px;
+  -webkit-transform: skewY(-3deg);
+  -ms-transform: skewY(-3deg);
+  transform: skewY(-3deg);
+  background: linear-gradient(180deg, #381c82 0, #1a0c4b 100%);
+}
+
+.temp {
+  height: 300px;
+  background-color: white;
+}
+
+.content {
+  -webkit-transform: skewY(3deg);
+  -ms-transform: skewY(3deg);
+  transform: skewY(3deg);
+}
+
+.bottom__rel {
+  position: relative;
+  height: 80vh;
+  margin-top: -30vh;
+  /* background-color: black; */
+}
+
+img {
+  max-width: 80vw !important;
 }
