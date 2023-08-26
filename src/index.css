@@ -10,7 +10,7 @@ body {
     left top,
     left bottom,
     from(#ecf3f7),
-    color-stop(99.92%, #fff)
+    color-stop(27%, #fff)
   );
   overflow-x: hidden;
 }

@@ -1,9 +1,20 @@
 .navbar {
   font-family: "Space Grotesk", sans-serif !important;
-  width: 95%;
+  width: 100%;
   margin: auto;
+ 
+ 
 }
-.navbar h3 {
+.navbar__nav {
+    padding-inline: 20px;
+}
+
+.navbar__grid--items ul {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar__grid--items li {
   display: inline-block;
   padding: 24px 12px;
   color: #00000ac5;
@@ -13,7 +24,7 @@
   font-size: 16px;
   cursor: pointer;
 }
-.navbar h3:hover {
+.navbar__grid--items li:hover {
   color: #000000;
 }
 
